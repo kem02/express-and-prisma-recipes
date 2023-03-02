@@ -14,7 +14,8 @@ datasource db {
 model User{
   id Int @unique @default(autoincrement())
   username String @db.VarChar(255)
-  recipe Recipe[]
+  password String
+  recipe Recipe[] // Letting prisma know this realtionship is going to exist. We add recipe and it uses the Recipe model and its an array.
 }
 
 model Recipe {
