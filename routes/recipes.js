@@ -75,7 +75,7 @@ export default function setupRecipeRouter(passport) {
     router.post("/", passport.authenticate("jwt", { session: false }), async (request, response) => {
         const newRecipe = await prisma.recipe.create({
             data: {
-                name: request.body.recipe,
+                recipe: request.body.recipe,
                 userId: request.user.id,
                 description: request.body.description
             },

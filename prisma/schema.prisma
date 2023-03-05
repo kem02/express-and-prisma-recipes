@@ -20,7 +20,7 @@ model User{
 
 model Recipe {
   id   Int   @unique @default(autoincrement())
-  name   String   @db.VarChar(255)
+  recipe   String   @db.VarChar(255)
   description  String
   // userId is placeholder that is a number that mimics the value of id Int inside model User 
   // @unique makes it so that the userId can only be used once
