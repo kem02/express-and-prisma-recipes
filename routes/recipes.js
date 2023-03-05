@@ -103,7 +103,7 @@ export default function setupRecipeRouter(passport) {
                 ]
             },
             data: {
-                name: request.body.recipe,
+                recipe: request.body.recipe,
                 description: request.body.description,
 
             },
